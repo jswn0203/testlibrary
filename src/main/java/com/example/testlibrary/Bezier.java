@@ -65,7 +65,6 @@ public class Bezier extends View {
         control.y = getY();
         invalidate();
         return true;
-
     }
 
     @Override
@@ -75,6 +74,9 @@ public class Bezier extends View {
 
         mPaint.setStrokeWidth(20);
         mPaint.setStyle(Paint.Style.FILL);
+
+        canvas.translate(centerX,centerY);
+
         canvas.drawCircle(control.x, control.y, 20, mPaint);
         canvas.drawCircle(start.x, start.y, 20, mPaint);
         canvas.drawCircle(end.x, end.y, 20, mPaint);
