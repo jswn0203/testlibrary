@@ -74,11 +74,10 @@ public class Bezier extends View {
         mPaint.setStrokeWidth(20);
         mPaint.setStyle(Paint.Style.FILL);
 
-//        canvas.translate(centerX,centerY);
 
-        canvas.drawCircle(control.x, control.y, 20, mPaint);
-        canvas.drawCircle(start.x, start.y, 20, mPaint);
-        canvas.drawCircle(end.x, end.y, 20, mPaint);
+        canvas.drawPoint(start.x,start.y,mPaint);
+        canvas.drawPoint(end.x,end.y,mPaint);
+        canvas.drawPoint(control.x,control.y,mPaint);
 
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(8);
