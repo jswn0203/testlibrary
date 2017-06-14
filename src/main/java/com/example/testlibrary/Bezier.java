@@ -60,8 +60,8 @@ public class Bezier extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        control.x = event.getX();
-        control.y = getY();
+        control.x = event.getRawX();
+        control.y = event.getRawX();
         invalidate();
         return true;
     }
