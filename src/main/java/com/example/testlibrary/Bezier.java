@@ -28,14 +28,13 @@ public class Bezier extends View {
         centerX = w / 2;
         centerY = h / 2;
 
-        start.x = 200;
-        start.y = 0;
-
-        end.x = -200;
-        end.y = 0;
-
-        control.x = 0;
-        control.y = 400;
+        // 初始化数据点和控制点的位置
+        start.x = centerX-200;
+        start.y = centerY;
+        end.x = centerX+200;
+        end.y = centerY;
+        control.x = centerX;
+        control.y = centerY-100;
     }
 
     public Bezier(Context context) {
@@ -75,7 +74,7 @@ public class Bezier extends View {
         mPaint.setStrokeWidth(20);
         mPaint.setStyle(Paint.Style.FILL);
 
-        canvas.translate(centerX,centerY);
+//        canvas.translate(centerX,centerY);
 
         canvas.drawCircle(control.x, control.y, 20, mPaint);
         canvas.drawCircle(start.x, start.y, 20, mPaint);
